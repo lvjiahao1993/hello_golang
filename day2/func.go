@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // 函数定义
 // func 函数名(参数列表) (返回值列表) {
 // 函数体
@@ -16,10 +18,10 @@ package main
 func add1(x int, y int) (sum int) {
 	sum = x + y
 	return sum
-}	
+}
 
 // 不命名返回值的函数示例：
-func add2(x int, y int) (int) {
+func add2(x int, y int) int {
 	return x + y
 }
 
@@ -36,7 +38,12 @@ func add4(x, y int) (sum int) {
 	return
 }
 
-
+// func main() {
+// 	x := 1
+// 	y := 2
+// 	sum := add4(x, y)
+// 	fmt.Println(sum)
+// }
 
 // 返回多个值的函数示例：
 func add5(x, y int) (sum, sub int) {
@@ -44,11 +51,12 @@ func add5(x, y int) (sum, sub int) {
 	sub = x - y
 	return sum, sub
 }
+
 // func main() {
 // 	x := 1
 // 	y := 2
-// 	sum, sub := add(x, y)
-// 	fmt.Println(sum)
+// 	sum, sub := add5(x, y)
+// 	fmt.Println(sum, sub)
 // }
 
 // 函数的参数列表和返回值列表的数据类型可以是值类型和引用类型。
@@ -78,6 +86,3 @@ func add5(x, y int) (sum, sub int) {
 // 	sum = *x + *y
 // 	return sum
 // }
-
-
-
